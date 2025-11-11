@@ -1,6 +1,7 @@
 /* 
  */
 
+/* Standard Styling Presets */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,16 @@ a:active {
   text-decoration: none;
 }
 
+/* Body - flex it so can position .header, .content, .footer for Holy Grail layout
+min-height: 100vh to ensure the body always fills up the entire screen.
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -38,3 +49,10 @@ a:active {
 .header-links > a {
   color: #e5e7eb;
 }
+
+/* Content Styles */
+.content {
+  flex: 1;
+}
+
+/* Footer Styles */
