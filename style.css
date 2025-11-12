@@ -63,4 +63,16 @@ body {
   flex: 1;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure all divs in .hero are same sized i.e. both take up the same amount of space */
+.hero > div {
+  flex: 1;
+  border: 1px black solid;
+}
+
 /* Footer Styles */
