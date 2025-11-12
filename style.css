@@ -51,6 +51,15 @@ body {
 
 /* Content Styles */
 .content {
+  /* flex: 1 means .content will fill all the space that is left in body */
+  flex: 1;
+  /* To position the 4 big containers within itself */
+  display: flex;
+  flex-direction: column;
+}
+
+/* To ensure all the divs that are direct child of .content i.e. the containers within .content are evenly sized */
+.content > div {
   flex: 1;
 }
 
