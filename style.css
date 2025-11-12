@@ -76,6 +76,12 @@ body {
   border: 1px white solid;
 }
 
+/* Left sided part of .hero */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-main-text {
   font-size: 48px;
   font-weight: 900;
@@ -89,7 +95,11 @@ body {
 
 .hero-button {
   background-color: #3882f6;
-  padding: 10px 20px;
+  /* Because I flexed the .hero-text which .hero-button is in, by default the button width will fill the entire screen. What saved me was to set the width to fit-content first so that flex-basis: auto will respect this starting size. Then we can control the sizing with the padding. Also, technically I don't need to flex .hero-text which could have saved me fromt his problem but I wanted to learn how to set the size correctly */
+  flex: 0 0 auto;
+  padding: 10px 32px;
+  width: fit-content;
+  margin-top: 10px;
   /* Seems like I still need to explicitly put the text color here cos button might have higher priority default styling.. */
   color: #e5e7eb;
   font-weight: bold;
