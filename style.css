@@ -67,12 +67,42 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1f2937;
 }
 
 /* Ensure all divs in .hero are same sized i.e. both take up the same amount of space */
 .hero > div {
   flex: 1;
-  border: 1px black solid;
+  border: 1px white solid;
+}
+
+.hero-main-text {
+  font-size: 48px;
+  font-weight: 900;
+  color: #f9faf8;
+}
+
+.hero-secondary-text {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.hero-button {
+  background-color: #3882f6;
+  padding: 10px 20px;
+  /* Seems like I still need to explicitly put the text color here cos button might have higher priority default styling.. */
+  color: #e5e7eb;
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  transition-duration: 0.25s;
+  background-color: #e5e7eb;
+  color: #3882f6;
 }
 
 /* Footer Styles */
