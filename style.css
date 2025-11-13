@@ -15,104 +15,23 @@ a:active {
   text-decoration: none;
 }
 
-/* Body - flex it so can position .header, .content, .footer for Holy Grail layout
-min-height: 100vh to ensure the body always fills up the entire screen.
- */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header Styles */
-.header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #1f2937;
-  padding: 10px;
-}
-
-.header-logo {
-  font-size: 24px;
-  font-weight: bolder;
-  color: #f9faf8;
-}
-
-.header-links {
-  display: flex;
-  gap: 16px;
-}
-
-/* a elements that are direct child of .header-links */
-.header-links > a {
-  color: #e5e7eb;
-}
-
-/* Content Styles */
-.content {
-  /* flex: 1 means .content will fill all the space that is left in body */
-  flex: 1;
-  /* To position the 4 big containers within itself */
-  display: flex;
-  flex-direction: column;
-}
-
-/* To ensure all the divs that are direct child of .content i.e. the containers within .content are evenly sized */
-.content > div {
-  flex: 1;
-}
-
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1f2937;
-}
-
-/* Ensure all divs in .hero are same sized i.e. both take up the same amount of space */
-.hero > div {
-  flex: 1;
-  border: 1px white solid;
-}
-
-/* Left sided part of .hero */
-.hero-text {
+  border: red 2px solid;
   display: flex;
   flex-direction: column;
 }
 
-.hero-main-text {
-  font-size: 48px;
-  font-weight: 900;
-  color: #f9faf8;
+.content {
+  border: blue 2px solid;
+  flex: 1;
 }
 
-.hero-secondary-text {
-  font-size: 18px;
-  color: #e5e7eb;
+.footer {
+  border: green 2px solid;
 }
-
-.hero-button {
-  background-color: #3882f6;
-  /* Because I flexed the .hero-text which .hero-button is in, by default the button width will fill the entire screen. What saved me was to set the width to fit-content first so that flex-basis: auto will respect this starting size. Then we can control the sizing with the padding. Also, technically I don't need to flex .hero-text which could have saved me fromt his problem but I wanted to learn how to set the size correctly */
-  flex: 0 0 auto;
-  padding: 10px 32px;
-  width: fit-content;
-  margin-top: 10px;
-  /* Seems like I still need to explicitly put the text color here cos button might have higher priority default styling.. */
-  color: #e5e7eb;
-  font-weight: bold;
-  border: none;
-  box-shadow: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.hero-button:hover {
-  transition-duration: 0.25s;
-  background-color: #e5e7eb;
-  color: #3882f6;
-}
-
-/* Footer Styles */
