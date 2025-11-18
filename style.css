@@ -8,6 +8,10 @@
   font-family: "Roboto", "sans-serif";
 }
 
+a {
+  color: black;
+}
+
 a:hover,
 a:visited,
 a:link,
@@ -26,13 +30,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1f2937;
 }
 
-.hero-container {
-  width: 80vw;
-  border: green 1px solid;
+.header,
+.hero-content {
+  width: 80%;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
+}
+
+.header-logo {
+  color: #f9faf8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-link {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+.hero-content {
+  display: flex;
 }
 
 .content {
