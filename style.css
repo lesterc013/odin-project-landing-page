@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #1f2937;
+  padding: 20px;
 }
 
 .header,
@@ -40,7 +41,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
 .header-logo {
@@ -61,8 +62,7 @@ body {
 
 .hero-content {
   display: flex;
-  max-height: 250px;
-  padding: 50px 0;
+  max-height: 200px;
 }
 
 .hero-column {
@@ -107,6 +107,42 @@ body {
 
 .content-child {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  text-align: center;
+  font-size: 36px;
+  color: #1f2937;
+  font-weight: 900;
+  padding: 20px;
+}
+
+.info-images {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-image-and-text {
+  /* Setting max-width to the img size made sure that the container does not grow anymore due to the words in the div below */
+  max-width: 150px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-image-and-text > img {
+  width: 100px;
+  height: auto;
+}
+
+.image-text {
+  text-align: center;
 }
 
 .footer {
