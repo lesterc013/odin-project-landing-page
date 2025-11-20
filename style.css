@@ -48,6 +48,11 @@ body {
   font-weight: bold;
 }
 
+.header-links {
+  display: flex;
+  gap: 20px;
+}
+
 .header-link {
   color: #e5e7eb;
   font-size: 18px;
